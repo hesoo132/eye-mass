@@ -1,0 +1,356 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "f88cc8d9-90d0-4f49-86de-b397772ae690")
+	(paper "A4")
+	(title_block
+		(title "STM32HSV")
+		(date "2025-02-03")
+		(rev "1.0")
+		(company "Roboties")
+	)
+	(lib_symbols)
+	(sheet
+		(at 163.83 39.37)
+		(size 45.72 35.56)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "01029270-e375-4974-8f3a-11561fb83c38")
+		(property "Sheetname" "Camera"
+			(at 163.83 38.6584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Camera.kicad_sch"
+			(at 163.83 75.5146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "[Project STM32H7 보드 설계3]"
+				(path "/f88cc8d9-90d0-4f49-86de-b397772ae690"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 218.44 38.1)
+		(size 44.45 36.83)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "107af4f9-3d4e-4600-bfac-df25861de541")
+		(property "Sheetname" "Motor"
+			(at 218.44 37.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Motor.kicad_sch"
+			(at 218.44 75.5146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "[Project STM32H7 보드 설계3]"
+				(path "/f88cc8d9-90d0-4f49-86de-b397772ae690"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 163.83 87.63)
+		(size 46.99 34.29)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "30e99fa7-a888-4f2d-885b-304b38da59d9")
+		(property "Sheetname" "TEMP"
+			(at 163.83 86.9184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "TEMP.kicad_sch"
+			(at 163.83 122.5046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "[Project STM32H7 보드 설계3]"
+				(path "/f88cc8d9-90d0-4f49-86de-b397772ae690"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 219.71 87.63)
+		(size 43.18 34.29)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "38890d2f-382b-4e7a-9c87-c736676eacda")
+		(property "Sheetname" "SDCARD"
+			(at 219.71 86.9184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "untitled.kicad_sch"
+			(at 219.71 122.5046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "[Project STM32H7 보드 설계3]"
+				(path "/f88cc8d9-90d0-4f49-86de-b397772ae690"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 110.49 87.63)
+		(size 44.45 33.02)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "38d71a8a-9e32-456c-aaa5-cb05ff995921")
+		(property "Sheetname" "FDCAN"
+			(at 110.49 86.9184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "FDCAN.kicad_sch"
+			(at 110.49 121.2346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "[Project STM32H7 보드 설계3]"
+				(path "/f88cc8d9-90d0-4f49-86de-b397772ae690"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 110.49 39.37)
+		(size 45.72 35.56)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "dcefdeff-abe1-4a07-941f-e8f59ee1b71c")
+		(property "Sheetname" "POWER"
+			(at 110.49 38.6584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "POWER.kicad_sch"
+			(at 110.49 75.5146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "[Project STM32H7 보드 설계3]"
+				(path "/f88cc8d9-90d0-4f49-86de-b397772ae690"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 48.26 86.36)
+		(size 45.72 35.56)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ec37e6ea-e7ce-40cf-868a-4586b3a13cbd")
+		(property "Sheetname" "SDRAM"
+			(at 48.26 85.6484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "SDRAM.kicad_sch"
+			(at 48.26 122.5046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "[Project STM32H7 보드 설계3]"
+				(path "/f88cc8d9-90d0-4f49-86de-b397772ae690"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 48.26 38.1)
+		(size 45.72 35.56)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "fe041171-8581-4a68-859c-38c754d6eb59")
+		(property "Sheetname" "MCU"
+			(at 48.26 37.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "MCU.kicad_sch"
+			(at 48.26 74.2446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "[Project STM32H7 보드 설계3]"
+				(path "/f88cc8d9-90d0-4f49-86de-b397772ae690"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
