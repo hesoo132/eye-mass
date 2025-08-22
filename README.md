@@ -1,10 +1,3 @@
-# STM32H7 Board Design – Schematic Analysis Report
-
-This document summarizes the schematic design of the **STM32H7-based embedded board**, extracted from the provided KiCad schematic PDF (`[Project STM32H7 보드 설계3].pdf`).  
-The design integrates MCU, SDRAM, power supply, camera, communication, sensor, motor control, and storage modules.  
-
----
-
 ## 📑 Table of Contents
 1. [MCU](#1-mcu)
 2. [SDRAM](#2-sdram)
