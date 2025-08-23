@@ -1,5 +1,5 @@
 # Eye-Mass Board  
-*Embedded Vision Processing Module for CubeSat / CanSat Missions*
+*Embedded Vision Processing Module*
 
 ![Hero Image](docs/images/assembled.jpg)
 
