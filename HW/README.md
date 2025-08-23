@@ -8,7 +8,7 @@ It integrates an OV5640 camera, external SDRAM, motor driver, and multiple debug
 ## 📸 PCB Overview
 | Top View | Bottom View |
 |----------|-------------|
-| ![Top](pcb/3d_render_top.png) | ![Bottom](pcb/3d_render_bottom.png) |
+| ![Top](docs/images/eye-mass-F.png) | ![Bottom](docs/images/eye-mass-B.png) |
 
 ---
 
