@@ -35,6 +35,7 @@
 ---
 
 ## 3. Power
+![Power Schematic](docs/images/Power.jpg)
 - **ICs**:  
   - **TPS562201** – Multiple buck converters generating +5V, +3.3V, +2.8V, +1.8V  
   - **INA219BxD** – Current/voltage monitoring over I2C  
@@ -47,6 +48,7 @@
 ---
 
 ## 4. Camera
+![CAM Schematic](docs/images/CAM.jpg)
 - **Module**: OV5640 (5MP CMOS sensor)  
 - **Interface**:  
   - DCMI (D0–D7, HSYNC, VSYNC, PIXCLK)  
@@ -59,6 +61,7 @@
 ---
 
 ## 5. FDCAN
+![FDCAN Schematic](docs/images/FDCAN.jpg)
 - **Transceiver**: MCP2562FD  
 - **Connections**:  
   - MCU pins: FDCAN_Tx3, FDCAN_Rx3  
@@ -71,6 +74,7 @@
 ---
 
 ## 6. Temperature Sensor
+![TEMP Schematic](docs/images/TEMP.jpg)
 - **IC**: AS6221 (x2)  
 - **Interface**: I2C2 (SCL, SDA)  
 - **Additional Features**: Address pins (ADD0/ADD1) allow multiple sensors on the same bus.  
@@ -79,6 +83,7 @@
 ---
 
 ## 7. Motor Driver
+![Motor Schematic](docs/images/Motor.jpg)
 - **Driver**: A4988 (Stepper motor driver)  
 - **Signals**: STEP, DIR, ENABLE, RESET, SLEEP, MS1–MS3 (microstepping config).  
 - **Outputs**: 1A, 1B, 2A, 2B → Stepper motor coils  
@@ -89,6 +94,7 @@
 ---
 
 ## 8. SD Card
+![SDCARD Schematic](docs/images/SDCARD.jpg)
 - **Connector**: ST1W008S4TR2000 microSD slot  
 - **Interface**: SDMMC2 (D0–D3, CMD, CLK, INT)  
 - **Power**: +3.3V with filtering (FB1 bead, decoupling capacitors).  
