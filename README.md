@@ -12,7 +12,7 @@
 ---
 
 ## 1. MCU
-![MCU Schematic](docs/images/MCU.jpg)
+![MCU Schematic](docs/MCU.jpg)
 - **Model**: STM32H723ZGTx  
 - **Key Connections**:  
   - Debug UART (J3)  
