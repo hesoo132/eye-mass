@@ -35,7 +35,7 @@
 ---
 
 ## 3. Power
-![Power Schematic](docs/images/Power.jpg)
+![POWER Schematic](docs/images/POWER.jpg)
 - **ICs**:  
   - **TPS562201** – Multiple buck converters generating +5V, +3.3V, +2.8V, +1.8V  
   - **INA219BxD** – Current/voltage monitoring over I2C  
