@@ -29,7 +29,7 @@ It integrates a camera (OV5640), external SDRAM, motor control, and communicatio
 ## 📸 Hardware Overview
 | PCB Top | PCB Bottom | Assembled |
 |---------|------------|-----------|
-| ![Top](docs/images/eye-mass-F.png) | ![Bottom](docs/images/eye-mass-B.png) | ![Assembled](docs/images/assembled.jpg) |
+| ![Top](docs/images/eye-mass-F.png) | ![Bottom](docs/images/eye-mass-B.png) |
 
 ---
 
