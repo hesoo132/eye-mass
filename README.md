@@ -1,7 +1,7 @@
 # Eye-Mass Board  
 *Embedded Vision Processing Hardware Platform*
 
-![Hero Image](docs/images/assembled.jpg)
+![Hero Image](docs/images/eye-mass-F.png)
 
 ---
 
@@ -27,8 +27,8 @@ It integrates a camera (OV5640), external SDRAM, motor control, and communicatio
 ---
 
 ## 📸 Hardware Overview
-| PCB Top | PCB Bottom | Assembled |
-|---------|------------|-----------|
+| PCB Top | PCB Bottom |
+|---------|------------|
 | ![Top](docs/images/eye-mass-F.png) | ![Bottom](docs/images/eye-mass-B.png) |
 
 ---
@@ -48,9 +48,3 @@ It integrates a camera (OV5640), external SDRAM, motor control, and communicatio
 - [STM32H7 Reference Manual](https://www.st.com/resource/en/reference_manual/dm00314099.pdf)  
 - [OV5640 Camera Datasheet](https://www.arducam.com/downloads/datasheet/OV5640DS.pdf)  
 - [CAN-FD Standard Overview](https://www.nxp.com/docs/en/application-note/AN5415.pdf)
-
----
-
-## 📜 License
-This project is released under the **MIT License**.  
-See [LICENSE](LICENSE) for details.
