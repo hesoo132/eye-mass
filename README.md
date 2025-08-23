@@ -1,114 +1,56 @@
-## 📑 Table of Contents
-1. [MCU](#1-mcu)
-2. [SDRAM](#2-sdram)
-3. [Power](#3-power)
-4. [Camera](#4-camera)
-5. [FDCAN](#5-fdcan)
-6. [Temperature Sensor](#6-temperature-sensor)
-7. [Motor Driver](#7-motor-driver)
-8. [SD Card](#8-sd-card)
-9. [Conclusion](#9-conclusion)
+# Eye-Mass Board  
+*Embedded Vision Processing Hardware Platform*
+
+![Hero Image](docs/images/assembled.jpg)
 
 ---
 
-## 1. MCU
-![MCU Schematic](docs/images/MCU.jpg)
-- **Model**: STM32H723ZGTx  
-- **Key Connections**:  
-  - Debug UART (J3)  
-  - ST-Link Mini (J2)  
-  - Boot mode selector (J6)  
-  - Reset circuit (SW1, SW2, NRST)  
-  - External TCXO 12 MHz (Y1)  
-- **GPIOs**: All major ports (PA, PB, PC, PD, PE, PF, PG, PH) broken out for peripheral interfacing.  
-- **Features**: Provides high-performance ARM Cortex-M7 core, suitable for real-time and multimedia applications.
+## 🔎 Overview
+**Eye-Mass** is a custom embedded hardware board designed for **real-time image processing and AI experimentation**.  
+It integrates a camera (OV5640), external SDRAM, motor control, and communication interfaces to enable tasks such as **capturing and analyzing images of components inside a box**.
 
 ---
 
-## 2. SDRAM
-![SDRAM Schematic](docs/images/SDRAM.jpg)
-- **Chip**: IS42S16320F-7BL (16-bit wide SDRAM)  
-- **Interface**: Connected via FMC (Flexible Memory Controller)  
-- **Signals**: Data (DQ0–DQ15), Address (A0–A12), Bank Address (BA0–1), Control (SDNWE, SDNCAS, SDNRAS, SDCLK, SDCKE0, NBL0–1).  
-- **Purpose**: Expands available memory for buffering camera/video data and high-speed computations.  
+## 🔧 Hardware Features
+
+| Component               | Purpose                                                                 |
+|-------------------------|-------------------------------------------------------------------------|
+| **Debug LED**           | Visual feedback for board status and firmware debugging                 |
+| **SDRAM**               | Additional memory for buffering image data and running lightweight AI   |
+| **OV5640 Camera**       | Captures images (e.g., counting SMD components inside a box)            |
+| **Motor Driver**        | Moves the camera to capture the entire box view                         |
+| **FDCAN**               | High-speed, reliable communication with external modules                |
+| **USART**               | Serial interface for debugging and logging                              |
+| **Temperature Sensor**  | Monitors motor driver and board ambient temperature                     |
+| **Current/Voltage Monitor** | Measures system power consumption and provides protection           |
 
 ---
 
-## 3. Power
-![POWER Schematic](docs/images/POWER.jpg)
-- **ICs**:  
-  - **TPS562201** – Multiple buck converters generating +5V, +3.3V, +2.8V, +1.8V  
-  - **INA219BxD** – Current/voltage monitoring over I2C  
-- **Input**: +12V  
-- **Output Rails**: +5V, +3.3V, +2.8V, +1.8V  
-- **Features**:  
-  - Power monitoring with shunt resistor (R2 = 0.1Ω)  
-  - Multiple decoupling capacitors for stability  
+## 📸 Hardware Overview
+| PCB Top | PCB Bottom | Assembled |
+|---------|------------|-----------|
+| ![Top](docs/images/eye-mass-F.png) | ![Bottom](docs/images/eye-mass-B.png) | ![Assembled](docs/images/assembled.jpg) |
 
 ---
 
-## 4. Camera
-![CAM Schematic](docs/images/CAM.jpg)
-- **Module**: OV5640 (5MP CMOS sensor)  
-- **Interface**:  
-  - DCMI (D0–D7, HSYNC, VSYNC, PIXCLK)  
-  - I2C4 (SDA, SCL) for configuration  
-- **Power Rails**: +1.8V, +2.8V, +3.3V  
-- **Other Signals**:  
-  - Camera reset, shutter control  
-  - LED & Flash control (Camera_LED, FLASH, FLASH_PWM)  
+## ✅ Current Status
+- [x] Schematic design completed
+- [x] PCB prototype (Rev. A) fabricated
+- [ ] SDRAM bring-up and validation
+- [ ] Camera interface bring-up (OV5640)
+- [ ] Motor control & positioning test
+- [ ] Communication test (FDCAN, USART)
+- [ ] Firmware integration (image capture + AI experimentation)
 
 ---
 
-## 5. FDCAN
-![FDCAN Schematic](docs/images/FDCAN.jpg)
-- **Transceiver**: MCP2562FD  
-- **Connections**:  
-  - MCU pins: FDCAN_Tx3, FDCAN_Rx3  
-  - Bus lines: CANH, CANL  
-- **Features**:  
-  - 120Ω termination resistor (R30)  
-  - ESD protection diode (ESDCAN24)  
-  - Shutdown control (FDCAN_SHDN3)  
+## 📑 References
+- [STM32H7 Reference Manual](https://www.st.com/resource/en/reference_manual/dm00314099.pdf)  
+- [OV5640 Camera Datasheet](https://www.arducam.com/downloads/datasheet/OV5640DS.pdf)  
+- [CAN-FD Standard Overview](https://www.nxp.com/docs/en/application-note/AN5415.pdf)
 
 ---
 
-## 6. Temperature Sensor
-![TEMP Schematic](docs/images/TEMP.jpg)
-- **IC**: AS6221 (x2)  
-- **Interface**: I2C2 (SCL, SDA)  
-- **Additional Features**: Address pins (ADD0/ADD1) allow multiple sensors on the same bus.  
-- **Purpose**: Provides ambient and board-level temperature monitoring.  
-
----
-
-## 7. Motor Driver
-![Motor Schematic](docs/images/Motor.jpg)
-- **Driver**: A4988 (Stepper motor driver)  
-- **Signals**: STEP, DIR, ENABLE, RESET, SLEEP, MS1–MS3 (microstepping config).  
-- **Outputs**: 1A, 1B, 2A, 2B → Stepper motor coils  
-- **Features**:  
-  - Supports microstepping  
-  - Powered from +12V motor supply with logic at +3.3V  
-
----
-
-## 8. SD Card
-![SDCARD Schematic](docs/images/SDCARD.jpg)
-- **Connector**: ST1W008S4TR2000 microSD slot  
-- **Interface**: SDMMC2 (D0–D3, CMD, CLK, INT)  
-- **Power**: +3.3V with filtering (FB1 bead, decoupling capacitors).  
-- **Features**: Supports standard SD card data logging.  
-
----
-
-## 9. Conclusion
-This STM32H7 board design integrates:  
-- High-performance MCU  
-- External SDRAM for data buffering  
-- Rich peripheral set: Camera, CAN, SD card, stepper motor, temperature sensors  
-- Robust power management and monitoring  
-
-**Application Domain**: Robotics, computer vision, satellite payload prototyping, or multi-sensor embedded systems.  
-
----
+## 📜 License
+This project is released under the **MIT License**.  
+See [LICENSE](LICENSE) for details.
