@@ -36,10 +36,10 @@ It integrates a camera (OV5640), external SDRAM, motor control, and communicatio
 ## ✅ Current Status
 - [x] Schematic design completed
 - [x] PCB prototype (Rev. A) fabricated
-- [ ] SDRAM bring-up and validation
+- [x] SDRAM bring-up and validation
 - [ ] Camera interface bring-up (OV5640)
-- [ ] Motor control & positioning test
-- [ ] Communication test (FDCAN, USART)
+- [x] Motor control & positioning test
+- [x] Communication test (FDCAN, USART)
 - [ ] Firmware integration (image capture + AI experimentation)
 
 ---
