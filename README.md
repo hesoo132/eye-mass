@@ -47,4 +47,3 @@ It integrates a camera (OV5640), external SDRAM, motor control, and communicatio
 ## 📑 References
 - [STM32H7 Reference Manual](https://www.st.com/resource/en/reference_manual/dm00314099.pdf)  
 - [OV5640 Camera Datasheet](https://www.arducam.com/downloads/datasheet/OV5640DS.pdf)
-- 
