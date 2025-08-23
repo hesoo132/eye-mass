@@ -1,38 +1,46 @@
 # Eye-Mass Hardware Design
 
-This directory contains the complete hardware design resources for the **Eye-Mass Board**.
+The **Eye-Mass Board** is a custom embedded platform designed for **camera-based vision tasks and AI experimentation**.  
+It integrates an OV5640 camera, external SDRAM, motor driver, and multiple debug/monitoring features.
 
 ---
 
-## 📂 Contents
-
-### schematic/
-- **eye-mass.sch**: KiCad schematic source file
-- **eye-mass.pdf**: Exported schematic in PDF format (recommended for quick viewing)
-- **block_diagram.png**: High-level hardware block diagram
-
-### pcb/
-- **eye-mass.kicad_pcb**: KiCad PCB layout file
-- **eye-mass-gerber.zip**: Gerber files for PCB manufacturing
-- **bom.csv**: Bill of Materials (BOM), including part numbers and suppliers
-- **3d_render_top.png / 3d_render_bottom.png**: 3D renderings of the PCB
-
-### lib/
-- **footprints.pretty/**: Custom KiCad footprints
-- **symbols/**: Custom schematic symbols
+## 📸 PCB Overview
+| Top View | Bottom View |
+|----------|-------------|
+| ![Top](pcb/3d_render_top.png) | ![Bottom](pcb/3d_render_bottom.png) |
 
 ---
 
-## 🛠 Design Notes
-- **Toolchain**: Designed with *KiCad 7.0*
-- **PCB Stackup**: 6-layer, impedance controlled for high-speed signals (DCMI, FDCAN)
-- **Power Domains**: Separated rails for MCU, SDRAM, and motor driver
-- **Debugging**: LEDs and USART for system bring-up
-- **Expansion**: SDRAM for AI workloads, motor driver for camera positioning
+## 📑 Design Resources
+
+- **Schematics**: [eye-mass.pdf](schematic/eye-mass.pdf) (PDF for quick view)  
+- **PCB Layout**: [eye-mass.kicad_pcb](pcb/eye-mass.kicad_pcb)  
+- **Gerber Files**: [eye-mass-gerber.zip](pcb/eye-mass-gerber.zip)  
+- **BOM**: [bom.csv](pcb/bom.csv)  
+- **Custom Libraries**: [lib/](lib/) (symbols & footprints)  
 
 ---
 
-## 📑 Recommended Viewing
-1. Open `schematic/eye-mass.pdf` for a quick overview of the circuit design.  
-2. View `pcb/3d_render_top.png` and `pcb/3d_render_bottom.png` for the PCB layout.  
-3. Refer to `bom.csv` for component list and sourcing.
+## 🔧 Key Hardware Notes
+- **EDA Tool**: KiCad 7.0  
+- **PCB Stackup**: 6-layer, impedance-controlled for high-speed (DCMI, FDCAN)  
+- **Memory**: External SDRAM for real-time image buffering + AI workloads  
+- **Camera**: OV5640 with DCMI interface for capturing and analysis  
+- **Motor Driver**: Enables camera positioning to capture full target area  
+- **Debugging**: LEDs + USART interface  
+- **Monitoring**: Temperature and current/voltage sensing  
+
+---
+
+## ✅ Progress
+- [x] Schematics completed  
+- [x] PCB prototype (Rev. A) fabricated  
+- [ ] SDRAM bring-up (partial validation ongoing)  
+- [ ] Camera interface bring-up (OV5640)  
+- [ ] Motor driver test & positioning control  
+- [ ] Communication tests (FDCAN / USART)  
+
+---
+
+## 📂 Folder Layout
