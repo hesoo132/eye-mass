@@ -26,6 +26,7 @@
 ---
 
 ## 2. SDRAM
+![SDRAM Schematic](docs/images/SDRAM.jpg)
 - **Chip**: IS42S16320F-7BL (16-bit wide SDRAM)  
 - **Interface**: Connected via FMC (Flexible Memory Controller)  
 - **Signals**: Data (DQ0–DQ15), Address (A0–A12), Bank Address (BA0–1), Control (SDNWE, SDNCAS, SDNRAS, SDCLK, SDCKE0, NBL0–1).  
