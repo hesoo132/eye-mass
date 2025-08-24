@@ -32,35 +32,48 @@ It integrates an OV5640 camera, external SDRAM, motor driver, and multiple debug
 
 ## 🧩 Schematic Highlights
 
-**Power & Regulation**
-![POWER](docs/images/POWER.jpg)
-- Input regulation and rails distribution
-- Decoupling strategy near MCU/SDRAM and camera
+## 🧩 Schematic Highlights (as-built)
 
-**SDRAM Interface**
+### 1) MCU — STM32H723ZGTx
+![MCU](docs/images/MCU.jpg)
+- **Connections**: Debug UART, **ST-Link Mini**, boot-mode pins, GPIO **PA~PG**, external clock **TCXO 12 MHz**, reset circuit.
+- **Note**: Rich GPIO for peripherals; dedicated ports for debugging/boot.
+
+### 2) SDRAM — IS42S16320F-7BL
 ![SDRAM](docs/images/SDRAM.jpg)
-- External SDRAM for high-resolution frame buffers & lightweight AI
-- Address/data bus, clocking, and timing-critical routing considerations
+- **Interface (FMC)**: DQ0–DQ15, A0–A12, BA0/BA1, SDNWE/SDNCAS/SDNRAS/SDNE0/SDCKE0/SDCLK, NBL0/NBL1.
+- **Purpose**: Extends memory for buffering and AI execution.
 
-**Camera (OV5640) Interface**
+### 3) Power
+![Power](docs/images/POWER.jpg)
+- **ICs**: **INA219BxD** (current/voltage monitor), **TPS562201** (buck).
+- **Rails**: From **+12 V** → **+5 V, +3.3 V, +2.8 V, +1.8 V**.
+
+### 4) Camera — OV5640
 ![Camera](docs/images/CAM.jpg)
-- DCMI data lines + PCLK/VSYNC/HSYNC, I²C control
-- MCLK generation and connector/pinout
+- **Interface**: **DCMI** D0–D7, HSYNC, VSYNC, PIXCLK + **I²C4**(SCL/SDA).
+- **Power**: **+1.8 V / +2.8 V / +3.3 V**; LED control lines (Camera_LED / FLASH / FLASH_PWM).
+- **Use**: Capture photos for **SMD counting inside a box**.
 
-**Motor Driver**
-![Motor](docs/images/Motor.jpg)
-- Motor driver power path & control signals
-- Enables camera positioning to capture the full scene
-
-**Telemetry (Temp / Voltage)**
-![Telemetry](docs/images/TEMP.jpg)
-- Temperature sensing for motor driver & board
-- Power monitoring for bring-up/debug safety
-
-**Communications (FDCAN)**
+### 5) FDCAN
 ![FDCAN](docs/images/FDCAN.jpg)
-- FDCAN interface to external systems
-- USART for debug logging & firmware bring-up
+- **Transceiver**: **MCP2562FD**.
+- **Connections**: MCU **FDCAN_Tx3 / FDCAN_Rx3** ↔ **CANH/CANL**; includes **120 Ω** termination.
+
+### 6) Temperature — AS6221 ×2
+![Temp](docs/images/TEMP.jpg)
+- **Interface**: **I²C2** (SCL/SDA).
+- **Use**: Monitor **motor driver temp** and **board temp** at two points.
+
+### 7) Motor Driver — A4988
+![Motor](docs/images/Motor.jpg)
+- **Signals**: **STEP, DIR, ENABLE, MS1, MS2, MS3**; outputs **1A/1B/2A/2B**.
+- **Feature**: Microstepping configuration supported.
+
+### 8) microSD — SDMMC2
+![SD](docs/images/SDCARD.jpg)
+- **Lines**: **D0–D3, CMD, CLK, INT**.
+- **Use**: Storage for images/logs.
 
 ---
 
