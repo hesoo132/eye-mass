@@ -32,8 +32,6 @@ It integrates an OV5640 camera, external SDRAM, motor driver, and multiple debug
 
 ## 🧩 Schematic Highlights
 
-## 🧩 Schematic Highlights (as-built)
-
 ### 1) MCU — STM32H723ZGT6
 ![MCU](docs/images/MCU.jpg)
 - **Device**: STM32H723ZGT6 
