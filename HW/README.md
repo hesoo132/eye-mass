@@ -15,7 +15,7 @@ It integrates an OV5640 camera, external SDRAM, motor driver, and multiple debug
 ## 📑 Design Resources
 
 - **Schematics**: [eye-mass.pdf](eye-mass.pdf) (PDF for quick view)  
-- **PCB Layout**: [eye-mass.kicad_pcb](eye-mass.kicad_pcb)  
+- **PCB Layout**: [Download eye-mass.kicad_pcb](eye-mass.kicad_pcb) (Open in KiCad)
 - **Gerber Files**: [eye-mass-gerber.zip](pcb/eye-mass-gerber.zip)
   
 ---
