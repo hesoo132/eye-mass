@@ -34,46 +34,53 @@ It integrates an OV5640 camera, external SDRAM, motor driver, and multiple debug
 
 ## 🧩 Schematic Highlights (as-built)
 
-### 1) MCU — STM32H723ZGTx
+### 1) MCU — STM32H723ZGT6
 ![MCU](docs/images/MCU.jpg)
-- **Connections**: Debug UART, **ST-Link Mini**, boot-mode pins, GPIO **PA~PG**, external clock **TCXO 12 MHz**, reset circuit.
-- **Note**: Rich GPIO for peripherals; dedicated ports for debugging/boot.
+- **Device**: STM32H723ZGT6 
+- **Connections**: Debug UART, **ST-Link Mini** (SWD), boot-mode pins, GPIO banks **PA/PB/PC/PD/PE/PF/PG**, external clock **TCXO 12 MHz**, reset circuit  
+- **Purpose**: Central control with dedicated debug/boot paths and ample I/O for peripherals
 
 ### 2) SDRAM — IS42S16320F-7BL
 ![SDRAM](docs/images/SDRAM.jpg)
-- **Interface (FMC)**: DQ0–DQ15, A0–A12, BA0/BA1, SDNWE/SDNCAS/SDNRAS/SDNE0/SDCKE0/SDCLK, NBL0/NBL1.
-- **Purpose**: Extends memory for buffering and AI execution.
+- **Device**: IS42S16320F-7BL  
+- **Interface**: **FMC** — DQ0–DQ15, A0–A12, BA0–BA1, **SDNWE/SDNCAS/SDNRAS/SDNE0/SDCKE0/SDCLK**, NBL0/NBL1  
+- **Purpose**: External memory to expand capacity for image buffering and lightweight AI execution
 
 ### 3) Power
 ![Power](docs/images/POWER.jpg)
-- **ICs**: **INA219BxD** (current/voltage monitor), **TPS562201** (buck).
-- **Rails**: From **+12 V** → **+5 V, +3.3 V, +2.8 V, +1.8 V**.
+- **Key ICs**: **INA219BxD** (current/voltage monitor), **TPS562201** (buck converter)  
+- **Rails**: From **+12 V** input to **+5 V / +3.3 V / +2.8 V / +1.8 V**  
+- **Purpose**: Stable multi-rail supply with inline power telemetry for easier power management
 
 ### 4) Camera — OV5640
 ![Camera](docs/images/CAM.jpg)
-- **Interface**: **DCMI** D0–D7, HSYNC, VSYNC, PIXCLK + **I²C4**(SCL/SDA).
-- **Power**: **+1.8 V / +2.8 V / +3.3 V**; LED control lines (Camera_LED / FLASH / FLASH_PWM).
-- **Use**: Capture photos for **SMD counting inside a box**.
+- **Sensor**: **OV5640**  
+- **Interface**: **DCMI** (D0–D7, HSYNC, VSYNC, PIXCLK) + **I²C4** (SCL, SDA)  
+- **Power & Control**: **+1.8 V / +2.8 V / +3.3 V** rails, LED control (**Camera_LED**, **FLASH**, **FLASH_PWM**)  
+- **Use Case**: Capturing images for tasks like **counting SMD components inside a box**
 
 ### 5) FDCAN
 ![FDCAN](docs/images/FDCAN.jpg)
-- **Transceiver**: **MCP2562FD**.
-- **Connections**: MCU **FDCAN_Tx3 / FDCAN_Rx3** ↔ **CANH/CANL**; includes **120 Ω** termination.
+- **Transceiver**: **MCP2562FD**  
+- **Connections**: MCU **FDCAN_Tx3 / FDCAN_Rx3** ↔ bus **CANH/CANL**; includes **120 Ω** termination  
+- **Purpose**: Robust CAN communication to external modules/systems
 
 ### 6) Temperature — AS6221 ×2
 ![Temp](docs/images/TEMP.jpg)
-- **Interface**: **I²C2** (SCL/SDA).
-- **Use**: Monitor **motor driver temp** and **board temp** at two points.
+- **Sensors**: **AS6221** ×2  
+- **Interface**: **I²C2** (SCL, SDA)  
+- **Purpose**: Dual-point temperature monitoring (e.g., motor driver and board ambient)
 
 ### 7) Motor Driver — A4988
 ![Motor](docs/images/Motor.jpg)
-- **Signals**: **STEP, DIR, ENABLE, MS1, MS2, MS3**; outputs **1A/1B/2A/2B**.
-- **Feature**: Microstepping configuration supported.
+- **Driver**: **A4988**  
+- **Signals**: **STEP, DIR, ENABLE, MS1, MS2, MS3**; outputs **1A/1B/2A/2B**  
+- **Purpose**: Stepper control with microstepping configuration for camera positioning
 
 ### 8) microSD — SDMMC2
 ![SD](docs/images/SDCARD.jpg)
-- **Lines**: **D0–D3, CMD, CLK, INT**.
-- **Use**: Storage for images/logs.
+- **Interface**: **SDMMC2** — D0–D3, CMD, CLK, INT  
+- **Purpose**: Removable storage for images and logs
 
 ---
 
