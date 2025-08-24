@@ -33,7 +33,7 @@ It integrates an OV5640 camera, external SDRAM, motor driver, and multiple debug
 ## 🧩 Schematic Highlights
 
 **Power & Regulation**
-![Power](docs/images/POWER.png)
+![POWER](docs/images/POWER.jpg)
 - Input regulation and rails distribution
 - Decoupling strategy near MCU/SDRAM and camera
 
