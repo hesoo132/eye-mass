@@ -57,8 +57,8 @@ It integrates an OV5640 camera, external SDRAM, motor driver, and multiple debug
 - Temperature sensing for motor driver & board
 - Power monitoring for bring-up/debug safety
 
-**Communications (FDCAN / USART)**
-![Comms](docs/images/FDCAN.png)
+**Communications (FDCAN)**
+![FDCAN](docs/images/FDCAN.png)
 - FDCAN interface to external systems
 - USART for debug logging & firmware bring-up
 
