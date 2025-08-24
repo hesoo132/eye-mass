@@ -52,7 +52,7 @@ It integrates an OV5640 camera, external SDRAM, motor driver, and multiple debug
 - Motor driver power path & control signals
 - Enables camera positioning to capture the full scene
 
-**Telemetry (Temp / Current / Voltage)**
+**Telemetry (Temp / Voltage)**
 ![Telemetry](docs/images/TEMP.jpg)
 - Temperature sensing for motor driver & board
 - Power monitoring for bring-up/debug safety
