@@ -32,10 +32,10 @@ It integrates an OV5640 camera, external SDRAM, motor driver, and multiple debug
 ## ✅ Progress
 - [x] Schematics completed  
 - [x] PCB prototype (Rev. A) fabricated  
-- [ ] SDRAM bring-up (partial validation ongoing)  
+- [x] SDRAM bring-up (partial validation ongoing)  
 - [ ] Camera interface bring-up (OV5640)  
-- [ ] Motor driver test & positioning control  
-- [ ] Communication tests (FDCAN / USART)  
+- [x] Motor driver test & positioning control  
+- [x] Communication tests (FDCAN / USART)  
 
 ---
 
