@@ -38,27 +38,27 @@ It integrates an OV5640 camera, external SDRAM, motor driver, and multiple debug
 - Decoupling strategy near MCU/SDRAM and camera
 
 **SDRAM Interface**
-![SDRAM](docs/images/SDRAM.png)
+![SDRAM](docs/images/SDRAM.jpg)
 - External SDRAM for high-resolution frame buffers & lightweight AI
 - Address/data bus, clocking, and timing-critical routing considerations
 
 **Camera (OV5640) Interface**
-![Camera](docs/images/CAM.png)
+![Camera](docs/images/CAM.jpg)
 - DCMI data lines + PCLK/VSYNC/HSYNC, I²C control
 - MCLK generation and connector/pinout
 
 **Motor Driver**
-![Motor](docs/images/Motor.png)
+![Motor](docs/images/Motor.jpg)
 - Motor driver power path & control signals
 - Enables camera positioning to capture the full scene
 
 **Telemetry (Temp / Current / Voltage)**
-![Telemetry](docs/images/TEMP.png)
+![Telemetry](docs/images/TEMP.jpg)
 - Temperature sensing for motor driver & board
 - Power monitoring for bring-up/debug safety
 
 **Communications (FDCAN)**
-![FDCAN](docs/images/FDCAN.png)
+![FDCAN](docs/images/FDCAN.jpg)
 - FDCAN interface to external systems
 - USART for debug logging & firmware bring-up
 
