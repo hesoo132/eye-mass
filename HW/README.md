@@ -1,5 +1,6 @@
 # Eye-Mass Hardware Design
 
+## 🔎 Overview
 The **Eye-Mass Board** is a custom embedded platform designed for **camera-based vision tasks and AI experimentation**.  
 It integrates an OV5640 camera, external SDRAM, motor driver, and multiple debug/monitoring features.
 
