@@ -38,7 +38,3 @@ It integrates **external SDRAM, motor driver, SD card logging, temperature/curre
   - Basic bring-up in progress  
   - SDRAM frame buffer prepared  
   - AI-based SMD counting pipeline: **Planned**
-
----
-
-## 📂 Folder Layout
