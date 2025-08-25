@@ -1,9 +1,4 @@
 # Eye-Mass Board  
-*Embedded Vision Processing Hardware Platform*
-
-![Hero Image](docs/images/eye-mass-F.png)
-
----
 
 ## 🔎 Overview
 **Eye-Mass** is a custom embedded hardware board designed for **real-time image processing and AI experimentation**.  
