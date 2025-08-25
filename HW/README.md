@@ -20,7 +20,7 @@ It integrates an OV5640 camera, external SDRAM, motor driver, and multiple debug
 ---
 
 ## 🔧 Key Hardware Notes
-- **EDA Tool**: KiCad 7.0  
+- **EDA Tool**: KiCad 9.0  
 - **PCB Stackup**: 6-layer, impedance-controlled for high-speed (DCMI, FDCAN)  
 - **Memory**: External SDRAM for real-time image buffering + AI workloads  
 - **Camera**: OV5640 with DCMI interface for capturing and analysis  
@@ -89,7 +89,3 @@ It integrates an OV5640 camera, external SDRAM, motor driver, and multiple debug
 - [ ] Camera interface bring-up (OV5640)  
 - [x] Motor driver test & positioning control  
 - [x] Communication tests (FDCAN / USART)  
-
----
-
-## 📂 Folder Layout
